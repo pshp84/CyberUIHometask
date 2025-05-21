@@ -10,9 +10,12 @@
       @for(item of menuItems; track item.label) {
       <li class="sidebar-menu-item" [ngClass]="{ 'menu-item-active': selectedItem === item }"
         (click)="toggleMenuItem(item)">
-        <a class="sidebar-item"  [routerLink]="item.link">
+        <a class="sidebar-item" [routerLink]="item.link">
           <i [class]="item.icon"></i>
+          @if(!isSidebarCollapsed) {
           <span class="sidebar-item-text">{{ item.label }}</span>
+          }
+
         </a>
       </li>
       }
@@ -23,7 +26,7 @@
   <div class="sidebar-bottom">
     <ul>
       <li class="sidebar-menu-item">
-        <a class="sidebar-item"  [routerLink]="">
+        <a class="sidebar-item" [routerLink]="">
           <i class="fas fa-cog"></i>
           <span class="sidebar-item-text">Settings</span>
         </a>
@@ -37,22 +40,14 @@
       <li class="sidebar-menu-item">
         <a class="sidebar-item">
           <i class="fas fa-user-circle"></i>
-          <span class="sidebar-item-text">Lorem</span>
+             @if(!isSidebarCollapsed) {
+          <span class="sidebar-item-text logout-label">
+            Lorem</span>
+       
+          <i class="fas fa-sign-out-alt logout-icon"></i>
+          }
         </a>
       </li>
     </ul>
-
-    <!-- <div class="sidebar-logout">
-      <a class="sidebar-item">
-        <i class="fas fa-user-circle"></i>
-        <div class="sidebar-profile-info">
-          <div class="small sidebar-item-text">Lorem</div>
-        </div>
-        @if(!isSidebarCollapsed) {
-        <i class="fas fa-sign-out-alt logout-icon"></i>
-        }
-
-      </a>
-    </div> -->
   </div>
 </div>

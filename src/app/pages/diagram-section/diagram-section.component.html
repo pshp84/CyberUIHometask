@@ -66,7 +66,7 @@
                   <div class="text-muted small">192.168.1.1</div>
                 </div>
 
-                <div class="col-md-6 d-flex flex-column align-items-center gap-1">
+                <div class="col-md-6 d-flex flex-column align-items-center gap-1" data-bs-toggle="offcanvas" data-bs-target="#drawerExample">
                   <div class="position-relative">
                     <div
                       class="rounded-circle bg-primary bg-opacity-25 d-flex justify-content-center align-items-center"
@@ -118,3 +118,50 @@
               </div>
             </div>
           </div>
+
+
+          <!-- Drawer / Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="drawerExample">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Lorem Ipsum</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="card shadow-sm p-3">
+      <div class="d-flex align-items-center mb-3">
+        <div class="rounded-circle bg-primary bg-opacity-25 d-flex justify-content-center align-items-center me-2" style="width: 40px; height: 40px;">
+          <i class="fas fa-server text-primary"></i>
+        </div>
+        <strong>Loremipsum</strong>
+      </div>
+
+  
+      <div class="text-muted small mb-2">
+        <strong>Lorem:</strong>
+        <span class="text-warning">Lorem</span>
+        <span class="text-warning">“Ipsum”</span>
+        <span class="text-success fw-semibold">Lorem</span>
+        Loremipsum Loremipsum
+      </div>
+      <div>
+        <span class="text-primary fw-bold">1.2.3.4</span>
+        Loremipsum
+        <span class="text-primary fw-bold">1.2.3.4</span>
+        <span class="text-primary fw-bold">Lorem</span>
+        <span class="text-info">1234, 5678</span>
+      </div>
+      <hr>
+      <div class="text-muted small mb-2">
+        <strong>Lorem:</strong>
+        <span class="text-warning">Lorem</span>
+        <span class="text-warning">“Ipsum”</span>
+        Loremipsum Loremipsum
+      </div>
+      <div>
+        <span class="text-purple fw-bold">1.2.3.4</span>
+        Loremipsum Loremipsum
+        <span class="text-purple fw-bold">1.2.3.4</span>
+      </div>
+    </div>
+  </div>
+</div>
