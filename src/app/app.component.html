@@ -1,0 +1,26 @@
+<div class="app-container">
+  <div class="position-relative">
+    <app-sidebar
+      [isSidebarCollapsed]="isSidebarCollapsed"
+      (sidebarToggle)="onSidebarToggle()"
+    >
+    </app-sidebar>
+   <button
+  class="sidebar-toggle-btn"
+  [ngClass]="{ 'sidebar-collapsed': isSidebarCollapsed }"
+  (click)="onSidebarToggle()"
+>
+  <i
+    class="fas"
+    [ngClass]="{
+      'fa-chevron-left': !isSidebarCollapsed,
+      'fa-chevron-right': isSidebarCollapsed
+    }"
+  ></i>
+</button>
+  </div>
+
+  <main class="content" [ngClass]="{ 'content-expanded': isSidebarCollapsed }">
+   <router-outlet></router-outlet>
+  </main>
+</div>

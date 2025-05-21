@@ -1,0 +1,58 @@
+<div class="sidebar" [ngClass]="{ 'sidebar-collapsed': isSidebarCollapsed }">
+  <!-- Sidebar Header -->
+  <div class="sidebar-header">
+    <!-- Logo or Brand -->
+  </div>
+
+  <!-- Sidebar Main Menu -->
+  <div class="sidebar-menu">
+    <ul>
+      @for(item of menuItems; track item.label) {
+      <li class="sidebar-menu-item" [ngClass]="{ 'menu-item-active': selectedItem === item }"
+        (click)="toggleMenuItem(item)">
+        <a class="sidebar-item"  [routerLink]="item.link">
+          <i [class]="item.icon"></i>
+          <span class="sidebar-item-text">{{ item.label }}</span>
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+
+  <!-- Sidebar Bottom Section -->
+  <div class="sidebar-bottom">
+    <ul>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-item"  [routerLink]="">
+          <i class="fas fa-cog"></i>
+          <span class="sidebar-item-text">Settings</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-item">
+          <i class="fas fa-user"></i>
+          <span class="sidebar-item-text">Profile</span>
+        </a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a class="sidebar-item">
+          <i class="fas fa-user-circle"></i>
+          <span class="sidebar-item-text">Lorem</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- <div class="sidebar-logout">
+      <a class="sidebar-item">
+        <i class="fas fa-user-circle"></i>
+        <div class="sidebar-profile-info">
+          <div class="small sidebar-item-text">Lorem</div>
+        </div>
+        @if(!isSidebarCollapsed) {
+        <i class="fas fa-sign-out-alt logout-icon"></i>
+        }
+
+      </a>
+    </div> -->
+  </div>
+</div>
