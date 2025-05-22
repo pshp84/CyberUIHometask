@@ -1,12 +1,316 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Custom variables
+$primary-color: #02983E;
+$secondary-color: #6c757d;
 
-// override material inline style to allow mini nav state
-mat-sidenav[style] {
-  visibility: visible !important;
+// Custom styles
+body {
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.5;
+  background: #FAFAFA;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #525D73;
+  word-break: break-word;
 }
-.mat-drawer {
-  transform: none !important;
+
+
+
+.custom-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #02983E;
 }
+
+.custom-card {
+  padding: 20px 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.101961), 0px 1px 3px rgba(0, 0, 0, 0.0509804);
+  border-radius: 15px;
+}
+@media (max-width: 767px) {
+  .custom-card {
+    padding: 15px;
+  }
+}
+
+aside {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+@media (max-width: 991px) {
+  aside {
+    transform: translateX(-100%);
+  }
+  aside.collapsed {
+    transform: translateX(0);
+  }
+}
+aside .collapser {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  transform: translateX(50%) rotate(180deg);
+}
+@media (max-width: 991px) {
+  aside .collapser {
+    right: -25px;
+  }
+}
+aside.collapsed .collapser {
+  transform: translateX(50%) rotate(0deg);
+}
+@media (min-width: 991px) {
+  aside.collapsed {
+    width: 80px;
+  }
+  aside.collapsed .collapsed-none {
+    display: none !important;
+  }
+  aside.collapsed .sidebar .sidebar-body ul li a {
+    justify-content: center;
+  }
+  aside.collapsed .sidebar .sidebar-body ul li a span {
+    display: none;
+  }
+  aside.collapsed .sidebar-footer {
+    justify-content: center;
+  }
+  aside.collapsed .sidebar-footer .ms-auto {
+    margin-left: 0 !important;
+  }
+  aside.collapsed + main {
+    margin-left: 80px;
+  }
+}
+@media (max-width: 991px) {
+  aside.collapsed {
+    margin-left: 0;
+  }
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #fff;
+  padding: 28px 10px;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+}
+.sidebar .sidebar-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+.sidebar .sidebar-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar .sidebar-body ul li a {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #525D73;
+  transition: 0.3s all;
+  border-radius: 8px;
+}
+.sidebar .sidebar-body ul li a svg,
+.sidebar .sidebar-body ul li a path {
+  fill: #A3A9B6;
+}
+.sidebar .sidebar-body ul li a:hover {
+  background-color: #F9F9F9;
+}
+.sidebar .sidebar-body ul li a:hover svg,
+.sidebar .sidebar-body ul li a:hover path {
+  fill: #000;
+}
+.sidebar .sidebar-body ul li a.active {
+  background-color: #E9FAF0;
+}
+.sidebar .sidebar-body ul li a.active svg,
+.sidebar .sidebar-body ul li a.active path {
+  fill: #000;
+}
+
+main {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  margin-left: 250px;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+@media (max-width: 991px) {
+  main {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+
+.dashboard-v-card {
+  max-height: calc(100vh - 64px);
+  overflow: auto;
+}
+@media (max-width: 1199px) {
+  .dashboard-v-card {
+    max-height: unset;
+  }
+}
+
+.flow {
+  display: flex;
+  gap: 1rem;
+}
+.flow-box {
+  background-color: #FAFAFA;
+  padding: 16px;
+  border-radius: 15px;
+  overflow: auto;
+}
+.flow-box .row {
+  min-width: 600px;
+}
+.flow-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.flow-item:not(.no-arrow):before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #858D9D;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 30px);
+}
+.flow-item:not(.no-arrow):after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 10px solid #E5E5E5;
+  border-width: 0 0 5px 5px;
+  border-color: #858D9D transparent #858D9D transparent;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: calc(100% + 28px);
+  transform: rotate(-45deg);
+}
+.flow-icon {
+  position: relative;
+}
+.flow-icon-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(25%, -25%);
+}
+.flow-arrow {
+  height: 50%;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  transform: translateY(-50%);
+}
+
+.extra-table td {
+  font-size: 15px;
+  color: #525D73;
+}
+.extra-table td:first-child {
+  font-weight: 700;
+  color: #334155;
+}
+
+.left-card {
+  overflow-y: auto;
+}
+
+.server-card {
+  padding: 13px 18px;
+  background: #FFFFFF;
+  border: 1px solid #F0F1F3;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.101961), 0px 1px 3px rgba(0, 0, 0, 0.0509804);
+  border-radius: 15px;
+}
+.server-card-inner {
+  cursor: pointer;
+  padding: 6px 10px;
+  background-color: #FAFAFA;
+  border-radius: 10px;
+}
+.server-card-inner > div:last-child {
+  border-left: 1px solid #858D9D;
+}
+
+.contextual-risk-card {
+  padding: 10px 20px;
+  border: 1px solid #F2F3F7;
+  box-shadow: 0px 2.9px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.contextual-risk-data {
+  border: 1px solid #F2F3F7;
+  box-shadow: 0px 2.9px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+.contextual-risk-data-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  border-bottom: 1px solid #E0E2E7;
+}
+.contextual-risk-detail {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E0E2E7;
+  padding: 10px;
+  gap: 10px;
+}
+.contextual-risk-badge {
+  border-bottom: 1px solid #E0E2E7;
+  margin-left: auto;
+  padding: 2px 10px;
+  border-radius: 50px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.contextual-risk-badge.critical {
+  color: #C6190D;
+  background-color: rgba(198, 25, 13, 0.1);
+}
+.contextual-risk-badge.high {
+  color: #E5372B;
+  background-color: rgba(229, 55, 43, 0.1);
+}
+.contextual-risk-badge.medium {
+  color: #EBA622;
+  background-color: rgba(235, 166, 34, 0.1);
+}
+.contextual-risk-badge.low {
+  color: #08B94E;
+  background-color: rgba(8, 185, 78, 0.1);
+}
+

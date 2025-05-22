@@ -1,0 +1,16 @@
+main {
+  // background-color: #f8f9fa;
+  padding: 2rem;
+  margin-left: 250px;
+  min-height: 100vh;
+  // transition: all 0.3s ease;
+
+  @media (max-width: 991px) {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+.main80 {
+ margin-left: 80px;
+}
+

@@ -1,0 +1,6 @@
+<div class="d-flex">
+<app-sidebar (sidebarToggle)="collapsed($event)"></app-sidebar>
+  <main [class.main80]="collapsedMenu">
+     <router-outlet></router-outlet>
+  </main>
+</div>

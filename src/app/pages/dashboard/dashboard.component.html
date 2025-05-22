@@ -1,20 +1,523 @@
-<div class="container-fluid mt-3">
-  <div class="row">
-    <!-- Section 1 -->
-    <div class="col-12 col-md-4 mb-3">
-     <app-description></app-description>
+<div class="">
+  <div class="row g-3">
+    <div class="col-xl-4">
+      <div class="custom-card left-card dashboard-v-card">
+        <div class="mb-5">
+          <h2 class="custom-title">Description</h2>
+          <p class="mb-0">Lorem ipsum dolor sit amet consectetur. Aenean sodales pellentesque gravida
+            nibh et magna
+            faucibus. Dui commodo ut metus amet egestas habitant viverra. Quisque fusce senectus
+            facilisis non diam leo nulla sem pellentesque. Sit in vel sed cursus metus sit fringilla
+            vestibulum.</p>
+        </div>
+        <div class="mb-4">
+          <h2 class="custom-title">Extra</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing fames egestas tellus dis
+            pretium tempus. Justo nisl nisl lorem lectus id ornare. Rhoncus in egestas in amet
+            porttitor
+            pellentesque sit. Amet gravida integer velit felis. Eu consectetur interdum auctor sed
+            aliquam. Eu pulvinar accumsan sed id. Duis a aliquam eu quisque commodo lectus. Lectus
+            ipsum
+            velit purus viverra vulputate viverra in nunc nulla. Euismod rhoncus mauris urna orci
+            gravida sagittis netus. Amet mus in vel etiam. Interdum habitant congue massa in etiam
+            sit.
+            Commodo nibh viverra lobortis augue lorem quam lorem suspendisse.
+          </p>
+        </div>
+        <hr>
+        <table class="table table-borderless extra-table">
+          <tbody>
+            <tr>
+              <td>Lorem ipsum dolor</td>
+              <td>10/19/2017</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor</td>
+              <td>Ut</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor</td>
+              <td>Eros</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor</td>
+              <td>Sit</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor</td>
+              <td>Lorem ipsum dolor</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor</td>
+              <td>Lorem ipsum dolor</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <p>Lorem ipsum dolor sit</p>
+        <div class="d-flex flex-column gap-3">
+          <div class="server-card" (click)="openServerCard1()">
+            <p>Lorem P</p>
+            <div data-target="card1" class="server-card-inner d-flex align-items-center">
+              <div class="d-flex align-items-center w-50 gap-2">
+                <svg width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="26.46" cy="26.9997" r="26.46" fill="#D7EAFF" />
+                  <path
+                    d="M20.2725 20.7076H20.2834M20.2725 33.8326H20.2834M18.085 16.3326H35.585C36.7931 16.3326 37.7725 17.312 37.7725 18.5201V22.8951C37.7725 24.1033 36.7931 25.0826 35.585 25.0826H18.085C16.8768 25.0826 15.8975 24.1033 15.8975 22.8951V18.5201C15.8975 17.312 16.8768 16.3326 18.085 16.3326ZM18.085 29.4576H35.585C36.7931 29.4576 37.7725 30.437 37.7725 31.6451V36.0201C37.7725 37.2283 36.7931 38.2076 35.585 38.2076H18.085C16.8768 38.2076 15.8975 37.2283 15.8975 36.0201V31.6451C15.8975 30.437 16.8768 29.4576 18.085 29.4576Z"
+                    stroke="#1873DE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div>
+                  <p class="fw-semibold mb-0">Server</p>
+                  <p class="small mb-0">Server</p>
+                </div>
+              </div>
+              <div class="w-50">
+                <p class="m-0 ps-2">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <p id="card1" class="mb-0 pt-3" [ngClass]="{ 'd-none': !serverCard1, 'd-block': serverCard1 }">Lorem ipsum
+              dolor sit amet consectetur. In
+              laoreet
+              elementum luctus
+              odio. Id enim urna.</p>
+          </div>
+          <div class="server-card" (click)="openServerCard2()">
+            <p>Lorem P</p>
+            <div data-target="card2" class="server-card-inner d-flex align-items-center">
+              <div class="d-flex align-items-center w-50 gap-2">
+                <svg width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="26.46" cy="26.9997" r="26.46" fill="#D7EAFF" />
+                  <path
+                    d="M20.2725 20.7076H20.2834M20.2725 33.8326H20.2834M18.085 16.3326H35.585C36.7931 16.3326 37.7725 17.312 37.7725 18.5201V22.8951C37.7725 24.1033 36.7931 25.0826 35.585 25.0826H18.085C16.8768 25.0826 15.8975 24.1033 15.8975 22.8951V18.5201C15.8975 17.312 16.8768 16.3326 18.085 16.3326ZM18.085 29.4576H35.585C36.7931 29.4576 37.7725 30.437 37.7725 31.6451V36.0201C37.7725 37.2283 36.7931 38.2076 35.585 38.2076H18.085C16.8768 38.2076 15.8975 37.2283 15.8975 36.0201V31.6451C15.8975 30.437 16.8768 29.4576 18.085 29.4576Z"
+                    stroke="#1873DE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div>
+                  <p class="fw-semibold mb-0">Server</p>
+                  <p class="small mb-0">Server</p>
+                </div>
+              </div>
+              <div class="w-50">
+                <p class="m-0 ps-2">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <p id="card2" class="mb-0 pt-3" [ngClass]="{ 'd-none': !serverCard2, 'd-block': serverCard2 }">Lorem ipsum
+              dolor sit amet consectetur. Quis
+              viverra etiam
+              pellentesque lectus semper in massa purus. Auctor aenean aenean senectus massa
+              dignissim vehicula mi erat purus. Praesent scelerisque aliquet metus sagittis dictum
+              sed sed. Sed venenatis sed urna quam.</p>
+          </div>
+          <div class="server-card" (click)="openServerCard3()">
+            <p>Lorem P</p>
+            <div data-target="card3" class="server-card-inner d-flex align-items-center">
+              <div class="d-flex align-items-center w-50 gap-2">
+                <svg width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="26.46" cy="26.9997" r="26.46" fill="#D7EAFF" />
+                  <path
+                    d="M20.2725 20.7076H20.2834M20.2725 33.8326H20.2834M18.085 16.3326H35.585C36.7931 16.3326 37.7725 17.312 37.7725 18.5201V22.8951C37.7725 24.1033 36.7931 25.0826 35.585 25.0826H18.085C16.8768 25.0826 15.8975 24.1033 15.8975 22.8951V18.5201C15.8975 17.312 16.8768 16.3326 18.085 16.3326ZM18.085 29.4576H35.585C36.7931 29.4576 37.7725 30.437 37.7725 31.6451V36.0201C37.7725 37.2283 36.7931 38.2076 35.585 38.2076H18.085C16.8768 38.2076 15.8975 37.2283 15.8975 36.0201V31.6451C15.8975 30.437 16.8768 29.4576 18.085 29.4576Z"
+                    stroke="#1873DE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div>
+                  <p class="fw-semibold mb-0">Server</p>
+                  <p class="small mb-0">Server</p>
+                </div>
+              </div>
+              <div class="w-50">
+                <p class="m-0 ps-2">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <p id="card3" class="mb-0 pt-3" [ngClass]="{ 'd-none': !serverCard3, 'd-block': serverCard3 }">Lorem ipsum
+              dolor sit amet consectetur. In
+              laoreet elementum luctus
+              odio. Id enim urna.</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="col-xl-8">
+      <div class="custom-card dashboard-v-card">
+        <div class="mb-4">
+          <h2 class="custom-title">Asset Flow & Contextual Risk</h2>
+          <div class="flow-box">
+            <div class="row align-items-center">
+              <div class="col-7">
+                <div class="flow">
+                  <div class="flow-item text-center">
+                    <div class="flow-icon">
+                      <svg class="flow-icon-badge" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.0398" cy="11.9102" r="10.5" fill="#7A44FF" stroke="#FAFAFA" />
+                        <mask id="mask0_1_425" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="4" width="14"
+                          height="14">
+                          <rect x="5.04004" y="4.91003" width="13" height="13" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_1_425)">
+                          <path
+                            d="M5.58154 15.7436V14.2269C5.58154 13.92 5.66054 13.6378 5.81852 13.3805C5.97651 13.1233 6.1864 12.9269 6.44821 12.7915C7.00793 12.5116 7.57668 12.3017 8.15446 12.1618C8.73224 12.0219 9.31904 11.9519 9.91488 11.9519C10.5107 11.9519 11.0975 12.0219 11.6753 12.1618C12.2531 12.3017 12.8218 12.5116 13.3815 12.7915C13.6433 12.9269 13.8532 13.1233 14.0112 13.3805C14.1692 13.6378 14.2482 13.92 14.2482 14.2269V15.7436H5.58154ZM15.3315 15.7436V14.1186C15.3315 13.7213 15.221 13.3399 14.9998 12.9743C14.7786 12.6087 14.4649 12.295 14.0586 12.0332C14.519 12.0873 14.9524 12.1799 15.3586 12.3108C15.7649 12.4417 16.144 12.6019 16.4961 12.7915C16.8211 12.972 17.0694 13.1729 17.2409 13.3941C17.4124 13.6153 17.4982 13.8568 17.4982 14.1186V15.7436H15.3315ZM9.91488 11.4102C9.31904 11.4102 8.80897 11.1981 8.38467 10.7738C7.96036 10.3495 7.74821 9.8394 7.74821 9.24357C7.74821 8.64774 7.96036 8.13767 8.38467 7.71336C8.80897 7.28906 9.31904 7.0769 9.91488 7.0769C10.5107 7.0769 11.0208 7.28906 11.4451 7.71336C11.8694 8.13767 12.0815 8.64774 12.0815 9.24357C12.0815 9.8394 11.8694 10.3495 11.4451 10.7738C11.0208 11.1981 10.5107 11.4102 9.91488 11.4102ZM15.3315 9.24357C15.3315 9.8394 15.1194 10.3495 14.6951 10.7738C14.2708 11.1981 13.7607 11.4102 13.1649 11.4102C13.0656 11.4102 12.9392 11.399 12.7857 11.3764C12.6322 11.3538 12.5058 11.329 12.4065 11.3019C12.6503 11.013 12.8376 10.6925 12.9685 10.3404C13.0994 9.98836 13.1649 9.62274 13.1649 9.24357C13.1649 8.8644 13.0994 8.49878 12.9685 8.1467C12.8376 7.79461 12.6503 7.47413 12.4065 7.18524C12.5329 7.1401 12.6593 7.11076 12.7857 7.09722C12.9121 7.08368 13.0385 7.0769 13.1649 7.0769C13.7607 7.0769 14.2708 7.28906 14.6951 7.71336C15.1194 8.13767 15.3315 8.64774 15.3315 9.24357ZM6.66488 14.6602H13.1649V14.2269C13.1649 14.1276 13.14 14.0373 13.0904 13.9561C13.0407 13.8748 12.9753 13.8116 12.894 13.7665C12.4065 13.5227 11.9145 13.3399 11.418 13.2181C10.9215 13.0962 10.4204 13.0352 9.91488 13.0352C9.40932 13.0352 8.90828 13.0962 8.41175 13.2181C7.91522 13.3399 7.42321 13.5227 6.93571 13.7665C6.85446 13.8116 6.78901 13.8748 6.73936 13.9561C6.6897 14.0373 6.66488 14.1276 6.66488 14.2269V14.6602ZM9.91488 10.3269C10.2128 10.3269 10.4678 10.2208 10.68 10.0087C10.8921 9.79652 10.9982 9.54149 10.9982 9.24357C10.9982 8.94565 10.8921 8.69062 10.68 8.47847C10.4678 8.26631 10.2128 8.16024 9.91488 8.16024C9.61696 8.16024 9.36192 8.26631 9.14977 8.47847C8.93762 8.69062 8.83154 8.94565 8.83154 9.24357C8.83154 9.54149 8.93762 9.79652 9.14977 10.0087C9.36192 10.2208 9.61696 10.3269 9.91488 10.3269Z"
+                            fill="white" />
+                        </g>
+                      </svg>
 
+                      <svg width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="26.5" cy="27.37" r="26.46" fill="#FFF1F0" />
+                        <path
+                          d="M16.1667 27.4599C16.1667 28.8965 16.7374 30.2742 17.7533 31.29C18.7691 32.3059 20.1468 32.8765 21.5834 32.8765C23.5851 32.9511 25.4992 33.7167 27.0001 35.0432C28.501 33.7167 30.4151 32.9511 32.4167 32.8765C33.8533 32.8765 35.2311 32.3059 36.2469 31.29C37.2627 30.2742 37.8334 28.8965 37.8334 27.4599V22.0432H32.4167C30.4151 22.1178 28.501 22.8834 27.0001 24.2099C25.4992 22.8834 23.5851 22.1178 21.5834 22.0432H16.1667V27.4599Z"
+                          stroke="#E6372B" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M20.5001 26.3765C22.1251 26.3765 23.7501 26.9182 23.7501 28.5432C21.5834 28.5432 20.5001 28.5432 20.5001 26.3765Z"
+                          stroke="#E6372B" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M33.5001 26.3765C31.8751 26.3765 30.2501 26.9182 30.2501 28.5432C32.4167 28.5432 33.5001 28.5432 33.5001 26.3765Z"
+                          stroke="#E6372B" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="flow-title">
+                      <span class="fw-semibold">Loremipsumm</span>
+                    </div>
+                  </div>
+                  <div class="flow-item text-center">
+                    <div class="flow-icon">
+                      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="26.4934" cy="27.2198" r="26.46" fill="#D7EAFF" />
+                        <path
+                          d="M19.0615 21.4298H19.0725M19.0615 32.2936H19.0725M16.874 17.8086H34.374C35.5821 17.8086 36.5615 18.6192 36.5615 19.6192V23.2405C36.5615 24.2405 35.5821 25.0511 34.374 25.0511H16.874C15.6659 25.0511 14.6865 24.2405 14.6865 23.2405V19.6192C14.6865 18.6192 15.6659 17.8086 16.874 17.8086ZM16.874 28.6724H34.374C35.5821 28.6724 36.5615 29.483 36.5615 30.483V34.1042C36.5615 35.1042 35.5821 35.9149 34.374 35.9149H16.874C15.6659 35.9149 14.6865 35.1042 14.6865 34.1042V30.483C14.6865 29.483 15.6659 28.6724 16.874 28.6724Z"
+                          stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
 
-    <!-- Section 2 -->
-    <div class="col-12 col-md-8 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <app-diagram-section></app-diagram-section>
-          <app-risk-summary></app-risk-summary>
+                    </div>
+                    <div class="flow-title">
+                      <span class="fw-semibold">Loremipsu</span>
+                    </div>
+                  </div>
+                  <div class="flow-item text-center no-arrow">
+                    <div class="flow-icon">
+                      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="26.4934" cy="27.2198" r="26.46" fill="#D7EAFF" />
+                        <path
+                          d="M19.0615 21.4298H19.0725M19.0615 32.2936H19.0725M16.874 17.8086H34.374C35.5821 17.8086 36.5615 18.6192 36.5615 19.6192V23.2405C36.5615 24.2405 35.5821 25.0511 34.374 25.0511H16.874C15.6659 25.0511 14.6865 24.2405 14.6865 23.2405V19.6192C14.6865 18.6192 15.6659 17.8086 16.874 17.8086ZM16.874 28.6724H34.374C35.5821 28.6724 36.5615 29.483 36.5615 30.483V34.1042C36.5615 35.1042 35.5821 35.9149 34.374 35.9149H16.874C15.6659 35.9149 14.6865 35.1042 14.6865 34.1042V30.483C14.6865 29.483 15.6659 28.6724 16.874 28.6724Z"
+                          stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="flow-title">
+                      <span class="fw-semibold">Loremipsu</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="flow position-relative d-flex flex-column justify-content-between gap-3 align-items-end">
+                  <img src="./images/arrow.png" alt="" class="flow-arrow">
+                  <div class="flow-item no-arrow flow-item-end text-center">
+                    <div class="flow-icon">
+                      <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="26.5" cy="31.8301" r="26.46" fill="#D7EAFF" />
+                        <path
+                          d="M19.5615 26.3499H19.5725M19.5615 37.2136H19.5725M17.374 22.7286H34.874C36.0821 22.7286 37.0615 23.5393 37.0615 24.5393V28.1605C37.0615 29.1605 36.0821 29.9711 34.874 29.9711H17.374C16.1659 29.9711 15.1865 29.1605 15.1865 28.1605V24.5393C15.1865 23.5393 16.1659 22.7286 17.374 22.7286ZM17.374 33.5924H34.874C36.0821 33.5924 37.0615 34.403 37.0615 35.403V39.0243C37.0615 40.0243 36.0821 40.8349 34.874 40.8349H17.374C16.1659 40.8349 15.1865 40.0243 15.1865 39.0243V35.403C15.1865 34.403 16.1659 33.5924 17.374 33.5924Z"
+                          stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round" />
+                        <rect x="37" width="22" height="22" rx="11" fill="#E6372B" />
+                        <path
+                          d="M50.0623 9.43426L46.9373 12.8197M46.9373 9.43426L50.0623 12.8197M53.4998 11.8041C53.4998 15.1895 51.3123 16.8822 48.7123 17.864C48.5761 17.9139 48.4282 17.9115 48.2935 17.8572C45.6873 16.8822 43.4998 15.1895 43.4998 11.8041V7.06447C43.4998 6.8849 43.5656 6.71268 43.6828 6.5857C43.8 6.45872 43.959 6.38739 44.1248 6.38739C45.3748 6.38739 46.9373 5.57489 48.0248 4.54572C48.1572 4.42317 48.3256 4.35583 48.4998 4.35583C48.6739 4.35583 48.8423 4.42317 48.9748 4.54572C50.0685 5.58166 51.6248 6.38739 52.8748 6.38739C53.0405 6.38739 53.1995 6.45872 53.3167 6.5857C53.4339 6.71268 53.4998 6.8849 53.4998 7.06447V11.8041Z"
+                          stroke="#FFF8F7" stroke-width="0.739568" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="flow-title">
+                      <span class="fw-semibold">Loremipsumdolorsit</span><br />
+                      <span class="fw-semibold small">192.168.1.1</span>
+                    </div>
+                  </div>
+                  <div class="flow-item no-arrow flow-item-end text-center" data-bs-toggle="offcanvas"
+     data-bs-target="#drawerExample">
+                    <div class="flow-icon">
+                      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="26.4934" cy="27.2198" r="26.46" fill="#D7EAFF" />
+                        <path
+                          d="M19.0615 21.4298H19.0725M19.0615 32.2936H19.0725M16.874 17.8086H34.374C35.5821 17.8086 36.5615 18.6192 36.5615 19.6192V23.2405C36.5615 24.2405 35.5821 25.0511 34.374 25.0511H16.874C15.6659 25.0511 14.6865 24.2405 14.6865 23.2405V19.6192C14.6865 18.6192 15.6659 17.8086 16.874 17.8086ZM16.874 28.6724H34.374C35.5821 28.6724 36.5615 29.483 36.5615 30.483V34.1042C36.5615 35.1042 35.5821 35.9149 34.374 35.9149H16.874C15.6659 35.9149 14.6865 35.1042 14.6865 34.1042V30.483C14.6865 29.483 15.6659 28.6724 16.874 28.6724Z"
+                          stroke="#1873DE" stroke-width="1.81062" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="flow-title">
+                      <span class="fw-semibold">Loremipsumdolorsit002</span><br />
+                      <span class="fw-semibold small">192.168.1.2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="flow-footer d-flex align-items-center gap-3">
+              <div class="d-flex align-items-center gap-1">
+                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z"
+                    fill="#E6372B" />
+                  <g clip-path="url(#clip0_1_717)">
+                    <path
+                      d="M14.2358 10.8225L10.7635 14.5841M10.7635 10.8225L14.2358 14.5841M18.0552 13.4556C18.0552 17.2172 15.6246 19.098 12.7358 20.1888C12.5845 20.2444 12.4202 20.2417 12.2705 20.1813C9.37465 19.098 6.94409 17.2172 6.94409 13.4556V8.18941C6.94409 7.98988 7.01726 7.79853 7.14749 7.65744C7.27772 7.51635 7.45436 7.43709 7.63854 7.43709C9.02742 7.43709 10.7635 6.53431 11.9719 5.3908C12.119 5.25463 12.3061 5.17981 12.4996 5.17981C12.6932 5.17981 12.8803 5.25463 13.0274 5.3908C14.2427 6.54184 15.9719 7.43709 17.3608 7.43709C17.5449 7.43709 17.7216 7.51635 17.8518 7.65744C17.982 7.79853 18.0552 7.98988 18.0552 8.18941V13.4556Z"
+                      stroke="#FFF8F7" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_717">
+                      <rect width="17.5" height="17.5" fill="white" transform="translate(3.75 4.08997)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="fw-semibold text-danger">Lorem</span>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z"
+                    fill="#FF9500" />
+                  <g clip-path="url(#clip0_1_725)">
+                    <path
+                      d="M14.2358 10.8225L10.7635 14.5841M10.7635 10.8225L14.2358 14.5841M18.0552 13.4556C18.0552 17.2172 15.6246 19.098 12.7358 20.1888C12.5845 20.2444 12.4202 20.2417 12.2705 20.1813C9.37465 19.098 6.94409 17.2172 6.94409 13.4556V8.18941C6.94409 7.98988 7.01726 7.79853 7.14749 7.65744C7.27772 7.51635 7.45436 7.43709 7.63854 7.43709C9.02742 7.43709 10.7635 6.53431 11.9719 5.3908C12.119 5.25463 12.3061 5.17981 12.4996 5.17981C12.6932 5.17981 12.8803 5.25463 13.0274 5.3908C14.2427 6.54184 15.9719 7.43709 17.3608 7.43709C17.5449 7.43709 17.7216 7.51635 17.8518 7.65744C17.982 7.79853 18.0552 7.98988 18.0552 8.18941V13.4556Z"
+                      stroke="#FFF8F7" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_725">
+                      <rect width="17.5" height="17.5" fill="white" transform="translate(3.75 4.08997)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="fw-semibold text-warning">Lorem</span>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0 12.84C0 5.93641 5.59644 0.339966 12.5 0.339966C19.4036 0.339966 25 5.93641 25 12.84C25 19.7435 19.4036 25.34 12.5 25.34C5.59644 25.34 0 19.7435 0 12.84Z"
+                    fill="#02983E" />
+                  <g clip-path="url(#clip0_1_732)">
+                    <path
+                      d="M14.2766 11.4334L12.2597 14.4683L10.897 13.5711M18.3337 13.5711C18.3337 17.2169 15.7816 19.0398 12.7482 20.0971C12.5894 20.151 12.4169 20.1484 12.2597 20.0898C9.21908 19.0398 6.66699 17.2169 6.66699 13.5711V8.46692C6.66699 8.27353 6.74382 8.08807 6.88056 7.95132C7.01731 7.81458 7.20277 7.73775 7.39616 7.73775C8.85449 7.73775 10.6774 6.86275 11.9462 5.75442C12.1006 5.62244 12.2971 5.54993 12.5003 5.54993C12.7035 5.54993 12.9 5.62244 13.0545 5.75442C14.3305 6.87005 16.1462 7.73775 17.6045 7.73775C17.7979 7.73775 17.9833 7.81458 18.1201 7.95132C18.2568 8.08807 18.3337 8.27353 18.3337 8.46692V13.5711Z"
+                      stroke="#FFF8F7" stroke-width="1.46434" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_732">
+                      <rect width="17.5" height="17.5" fill="white" transform="translate(3.75 4.08997)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="fw-semibold text-success">Lorem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="custom-title">Lorem ipsum dolor sit</h2>
+          <div class="row g-3">
+            <div class="col-lg-6">
+              <div class="contextual-risk-data">
+                <div class="contextual-risk-data-header">
+                  <span>Asset</span>
+                  <span>Contextual Risk</span>
+                </div>
+                <div class="contextual-risk-data-body">
+                  <div class="contextual-risk-detail">
+                    <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="22.5" cy="23.3396" r="22.5" fill="#ECF5FF" />
+                      <g clip-path="url(#clip0_1_747)">
+                        <path
+                          d="M17.2385 17.9893H17.2479M17.2385 29.15H17.2479M15.3784 14.269H30.2594C31.2867 14.269 32.1195 15.1018 32.1195 16.1292V19.8494C32.1195 20.8767 31.2867 21.7095 30.2594 21.7095H15.3784C14.3511 21.7095 13.5183 20.8767 13.5183 19.8494V16.1292C13.5183 15.1018 14.3511 14.269 15.3784 14.269ZM15.3784 25.4298H30.2594C31.2867 25.4298 32.1195 26.2626 32.1195 27.2899V31.0101C32.1195 32.0374 31.2867 32.8702 30.2594 32.8702H15.3784C14.3511 32.8702 13.5183 32.0374 13.5183 31.0101V27.2899C13.5183 26.2626 14.3511 25.4298 15.3784 25.4298Z"
+                          stroke="#3994FF" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_747">
+                          <rect width="22.3214" height="22.3214" fill="white" transform="translate(11.6582 12.4089)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div>
+                      <span class="fw-semibold">Loremipsumdolorsit002</span><br />
+                      <span class="small">192.168.1.2</span>
+                    </div>
+                    <div class="contextual-risk-badge critical">
+                      Critical
+                    </div>
+                  </div>
+              
+                  <div class="contextual-risk-detail">
+                    <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="22.5" cy="23.3396" r="22.5" fill="#ECF5FF" />
+                      <g clip-path="url(#clip0_1_747)">
+                        <path
+                          d="M17.2385 17.9893H17.2479M17.2385 29.15H17.2479M15.3784 14.269H30.2594C31.2867 14.269 32.1195 15.1018 32.1195 16.1292V19.8494C32.1195 20.8767 31.2867 21.7095 30.2594 21.7095H15.3784C14.3511 21.7095 13.5183 20.8767 13.5183 19.8494V16.1292C13.5183 15.1018 14.3511 14.269 15.3784 14.269ZM15.3784 25.4298H30.2594C31.2867 25.4298 32.1195 26.2626 32.1195 27.2899V31.0101C32.1195 32.0374 31.2867 32.8702 30.2594 32.8702H15.3784C14.3511 32.8702 13.5183 32.0374 13.5183 31.0101V27.2899C13.5183 26.2626 14.3511 25.4298 15.3784 25.4298Z"
+                          stroke="#3994FF" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_747">
+                          <rect width="22.3214" height="22.3214" fill="white" transform="translate(11.6582 12.4089)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div>
+                      <span class="fw-semibold">Loremipsumdolorsit002</span><br />
+                      <span class="small">192.168.1.2</span>
+                    </div>
+                    <div class="contextual-risk-badge critical">
+                      Critical
+                    </div>
+                  </div>
+                  <div class="contextual-risk-detail">
+                    <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="22.5" cy="23.3396" r="22.5" fill="#ECF5FF" />
+                      <g clip-path="url(#clip0_1_747)">
+                        <path
+                          d="M17.2385 17.9893H17.2479M17.2385 29.15H17.2479M15.3784 14.269H30.2594C31.2867 14.269 32.1195 15.1018 32.1195 16.1292V19.8494C32.1195 20.8767 31.2867 21.7095 30.2594 21.7095H15.3784C14.3511 21.7095 13.5183 20.8767 13.5183 19.8494V16.1292C13.5183 15.1018 14.3511 14.269 15.3784 14.269ZM15.3784 25.4298H30.2594C31.2867 25.4298 32.1195 26.2626 32.1195 27.2899V31.0101C32.1195 32.0374 31.2867 32.8702 30.2594 32.8702H15.3784C14.3511 32.8702 13.5183 32.0374 13.5183 31.0101V27.2899C13.5183 26.2626 14.3511 25.4298 15.3784 25.4298Z"
+                          stroke="#3994FF" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_747">
+                          <rect width="22.3214" height="22.3214" fill="white" transform="translate(11.6582 12.4089)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div>
+                      <span class="fw-semibold">Loremipsumdolorsit002</span><br />
+                      <span class="small">192.168.1.2</span>
+                    </div>
+                    <div class="contextual-risk-badge high">
+                      High
+                    </div>
+                  </div>
+                  <div class="contextual-risk-detail">
+                    <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="22.5" cy="23.3396" r="22.5" fill="#ECF5FF" />
+                      <g clip-path="url(#clip0_1_747)">
+                        <path
+                          d="M17.2385 17.9893H17.2479M17.2385 29.15H17.2479M15.3784 14.269H30.2594C31.2867 14.269 32.1195 15.1018 32.1195 16.1292V19.8494C32.1195 20.8767 31.2867 21.7095 30.2594 21.7095H15.3784C14.3511 21.7095 13.5183 20.8767 13.5183 19.8494V16.1292C13.5183 15.1018 14.3511 14.269 15.3784 14.269ZM15.3784 25.4298H30.2594C31.2867 25.4298 32.1195 26.2626 32.1195 27.2899V31.0101C32.1195 32.0374 31.2867 32.8702 30.2594 32.8702H15.3784C14.3511 32.8702 13.5183 32.0374 13.5183 31.0101V27.2899C13.5183 26.2626 14.3511 25.4298 15.3784 25.4298Z"
+                          stroke="#3994FF" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_747">
+                          <rect width="22.3214" height="22.3214" fill="white" transform="translate(11.6582 12.4089)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div>
+                      <span class="fw-semibold">Loremipsumdolorsit002</span><br />
+                      <span class="small">192.168.1.2</span>
+                    </div>
+                    <div class="contextual-risk-badge medium">
+                      Medium
+                    </div>
+                  </div>
+                  
+                  <div class="contextual-risk-detail">
+                    <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="22.5" cy="23.3396" r="22.5" fill="#ECF5FF" />
+                      <g clip-path="url(#clip0_1_747)">
+                        <path
+                          d="M17.2385 17.9893H17.2479M17.2385 29.15H17.2479M15.3784 14.269H30.2594C31.2867 14.269 32.1195 15.1018 32.1195 16.1292V19.8494C32.1195 20.8767 31.2867 21.7095 30.2594 21.7095H15.3784C14.3511 21.7095 13.5183 20.8767 13.5183 19.8494V16.1292C13.5183 15.1018 14.3511 14.269 15.3784 14.269ZM15.3784 25.4298H30.2594C31.2867 25.4298 32.1195 26.2626 32.1195 27.2899V31.0101C32.1195 32.0374 31.2867 32.8702 30.2594 32.8702H15.3784C14.3511 32.8702 13.5183 32.0374 13.5183 31.0101V27.2899C13.5183 26.2626 14.3511 25.4298 15.3784 25.4298Z"
+                          stroke="#3994FF" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_747">
+                          <rect width="22.3214" height="22.3214" fill="white" transform="translate(11.6582 12.4089)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div>
+                      <span class="fw-semibold">Loremipsumdolorsit002</span><br />
+                      <span class="small">192.168.1.2</span>
+                    </div>
+                    <div class="contextual-risk-badge low">
+                      Low
+                    </div>
+                  </div>
+                </div>
+                <div class="contextual-risk-data-footer d-flex align-items-center justify-content-center gap-2 p-2">
+                  <span>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_1_863" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
+                        height="21">
+                        <rect x="20.5" y="20.84" width="20" height="20" transform="rotate(180 20.5 20.84)"
+                          fill="#999999" />
+                      </mask>
+                      <g mask="url(#mask0_1_863)">
+                        <path
+                          d="M12.6659 5.83997L13.8325 7.00663L9.99919 10.84L13.8325 14.6733L12.6659 15.84L7.66585 10.84L12.6659 5.83997Z"
+                          fill="#C2C6CE" />
+                      </g>
+                    </svg>
+                  </span>
+                  <span>Showing 1-2 of 2</span>
+                  <span>
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_1_868" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
+                        height="21">
+                        <rect x="0.5" y="0.839966" width="20" height="20" fill="#999999" />
+                      </mask>
+                      <g mask="url(#mask0_1_868)">
+                        <path
+                          d="M8.33415 15.84L7.16748 14.6733L11.0008 10.84L7.16748 7.00663L8.33415 5.83997L13.3341 10.84L8.33415 15.84Z"
+                          fill="#858D9D" />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="contextual-risk-card">
+                <h6>Contextual Risk</h6>
+                <canvas id="coursesDoughnutChart" height="150px"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <app-remediation-technique-section></app-remediation-technique-section>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="drawerExample">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Lorem Ipsum</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="card shadow-sm p-3">
+      <div class="d-flex align-items-center mb-3">
+        <div class="rounded-circle bg-primary bg-opacity-25 d-flex justify-content-center align-items-center me-2"
+          style="width: 40px; height: 40px;">
+          <i class="fas fa-server text-primary"></i>
+        </div>
+        <strong>Loremipsum</strong>
+      </div>
+
+      <div class="text-muted small mb-2">
+        <strong>Lorem:</strong>
+        <span class="text-warning">Lorem</span>
+        <span class="text-warning">“Ipsum”</span>
+        <span class="text-success fw-semibold">Lorem</span>
+        Loremipsum Loremipsum
+      </div>
+      <div>
+        <span class="text-primary fw-bold">1.2.3.4</span>
+        Loremipsum
+        <span class="text-primary fw-bold">1.2.3.4</span>
+        <span class="text-primary fw-bold">Lorem</span>
+        <span class="text-info">1234, 5678</span>
+      </div>
+      <hr>
+      <div class="text-muted small mb-2">
+        <strong>Lorem:</strong>
+        <span class="text-warning">Lorem</span>
+        <span class="text-warning">“Ipsum”</span>
+        Loremipsum Loremipsum
+      </div>
+      <div>
+        <span class="text-purple fw-bold">1.2.3.4</span>
+        Loremipsum Loremipsum
+        <span class="text-purple fw-bold">1.2.3.4</span>
+      </div>
+    </div>
+  </div>
 </div>
