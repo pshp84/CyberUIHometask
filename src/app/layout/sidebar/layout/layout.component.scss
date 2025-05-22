@@ -10,7 +10,11 @@ main {
     padding: 15px;
   }
 }
-.main80 {
- margin-left: 80px;
-}
+
+
+ @media (min-width: 992px) {
+   .collapsed-menu {
+     margin-left: 80px;
+  }
+  }
 
