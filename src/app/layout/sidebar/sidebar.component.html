@@ -1,11 +1,13 @@
 <aside [class.collapsed]="isCollapsed">
   <a  class="collapser" (click)="toggleSidebar()">
-    <i class="fas fa-chevron-left"></i>
+    <i class="fas fa-chevron-left d-none d-lg-inline"></i>
+    <i class="fa-solid fa-bars d-lg-none"></i>
+    <i class="fa-solid fa-xmark d-lg-none"></i>
   </a>
   <div class="sidebar">
     <div class="sidebar-body">
       <ul>
-        <li class="text-center mb-2">
+        <li class="text-center mb-2 logo">
           <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_9031_395)">
               <rect x="0.823853" width="30.3524" height="30.3524" fill="#D3F4E0" />

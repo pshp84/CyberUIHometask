@@ -21,6 +21,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #02983E;
+  margin-bottom: 12px;
 }
 
 .custom-card {
@@ -163,16 +164,6 @@ main {
   }
 }
 
-.dashboard-v-card {
-  max-height: calc(100vh - 64px);
-  overflow: auto;
-}
-@media (max-width: 1199px) {
-  .dashboard-v-card {
-    max-height: unset;
-  }
-}
-
 .flow {
   display: flex;
   gap: 1rem;
@@ -181,7 +172,7 @@ main {
   background-color: #FAFAFA;
   padding: 16px;
   border-radius: 15px;
-  overflow: auto;
+  // overflow: auto;
 }
 .flow-box .row {
   min-width: 600px;

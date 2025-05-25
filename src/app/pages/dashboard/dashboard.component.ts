@@ -31,9 +31,9 @@ export class DashboardComponent implements OnInit {
       options: {
         responsive: true,
         cutout: '85%',
-        aspectRatio: 1.8,
         plugins: {
           legend: {
+            display: false,
             position: 'left',
             align: 'center',
             labels: {
