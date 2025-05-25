@@ -106,7 +106,6 @@
 }
 
 .left-card {
-  // max-height: calc(100vh - 60px);
   overflow-y: auto;
 }
 
@@ -126,6 +125,9 @@
     &>div:last-child {
       border-left: 1px solid #858D9D;
     }
+  }
+  @media (max-width: 1279px) {
+    padding: 10px;
   }
 }
 
