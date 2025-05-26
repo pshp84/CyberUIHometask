@@ -79,7 +79,7 @@
                 <p class="m-0 ps-2">Lorem ipsum dolor sit amet consectetur.</p>
               </div>
             </div>
-            <p id="card1" class="mb-0 pt-3" [ngClass]="{ 'd-none': !serverCard1, 'd-block': serverCard1 }">Lorem ipsum
+            <p id="card1" class="mb-0 pt-3 toggle-content" [ngClass]="{ 'show': serverCard1 }">Lorem ipsum
               dolor sit amet consectetur. In
               laoreet
               elementum luctus
@@ -104,7 +104,7 @@
                 <p class="m-0 ps-2">Lorem ipsum dolor sit amet consectetur.</p>
               </div>
             </div>
-            <p id="card2" class="mb-0 pt-3" [ngClass]="{ 'd-none': !serverCard2, 'd-block': serverCard2 }">Lorem ipsum
+            <p id="card2" class="mb-0 pt-3 toggle-content" [ngClass]="{ 'show': serverCard2 }">Lorem ipsum
               dolor sit amet consectetur. Quis
               viverra etiam
               pellentesque lectus semper in massa purus. Auctor aenean aenean senectus massa
@@ -130,7 +130,7 @@
                 <p class="m-0 ps-2">Lorem ipsum dolor sit amet consectetur.</p>
               </div>
             </div>
-            <p id="card3" class="mb-0 pt-3" [ngClass]="{ 'd-none': !serverCard3, 'd-block': serverCard3 }">Lorem ipsum
+            <p id="card3" class="mb-0 pt-3 toggle-content" [ngClass]="{ 'show': serverCard3 }">Lorem ipsum
               dolor sit amet consectetur. In
               laoreet elementum luctus
               odio. Id enim urna.</p>
@@ -377,7 +377,7 @@
                           </svg>
                           Lorem: Loremipsum
                           <span class="yellow-text flow-ip-text">
-                            Lorem “ipsum"
+                            Lorem "ipsum"
                           </span>
                           Loremipsum
                           <span class="blue-text flow-ip-text">
@@ -438,7 +438,7 @@
                           </svg>
                           Lorem: Loremipsum
                           <span class="yellow-text flow-ip-text">
-                            Lorem “ipsum"
+                            Lorem "ipsum"
                           </span>
                           Loremipsum
                           <span class="blue-text flow-ip-text">
@@ -636,7 +636,7 @@
       <div class="text-muted small mb-2">
         <strong>Lorem:</strong>
         <span class="text-warning">Lorem</span>
-        <span class="text-warning">“Ipsum”</span>
+        <span class="text-warning">"Ipsum"</span>
         <span class="text-success fw-semibold">Lorem</span>
         Loremipsum Loremipsum
       </div>
@@ -651,7 +651,7 @@
       <div class="text-muted small mb-2">
         <strong>Lorem:</strong>
         <span class="text-warning">Lorem</span>
-        <span class="text-warning">“Ipsum”</span>
+        <span class="text-warning">"Ipsum"</span>
         Loremipsum Loremipsum
       </div>
       <div>

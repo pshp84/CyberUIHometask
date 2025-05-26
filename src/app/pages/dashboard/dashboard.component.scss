@@ -126,6 +126,22 @@
       border-left: 1px solid #858D9D;
     }
   }
+
+  .toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    
+    &.show {
+      max-height: 200px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @media (max-width: 1279px) {
     padding: 10px;
   }
