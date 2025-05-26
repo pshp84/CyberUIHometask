@@ -41,7 +41,12 @@
             </tr>
             <tr>
               <td>Lorem ipsum dolor</td>
-              <td>Yes</td>
+              <td>
+                <div class="yes-indicator">
+                  <span class="checkmark">✔</span>
+                  <span class="label">Yes</span>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Lorem ipsum dolor</td>
@@ -147,8 +152,7 @@
               <div class="col-7">
                 <div class="flow">
                   <div class="flow-item text-center">
-                    <div class="flow-icon" data-bs-toggle="offcanvas"
-                    data-bs-target="#drawerExample">
+                    <div class="flow-icon" data-bs-toggle="offcanvas" data-bs-target="#drawerExample">
                       <svg class="flow-icon-badge" width="23" height="23" viewBox="0 0 23 23" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <circle cx="11.0398" cy="11.9102" r="10.5" fill="#7A44FF" stroke="#FAFAFA" />
@@ -199,8 +203,7 @@
                     </div>
                   </div>
                   <div class="flow-item text-center">
-                    <div class="flow-icon" data-bs-toggle="offcanvas"
-                    data-bs-target="#drawerExample">
+                    <div class="flow-icon" data-bs-toggle="offcanvas" data-bs-target="#drawerExample">
                       <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="26.4934" cy="27.2198" r="26.46" fill="#D7EAFF" />
                         <path
@@ -261,8 +264,7 @@
                     </div>
                   </div>
                   <div class="flow-item text-center no-arrow">
-                    <div class="flow-icon" data-bs-toggle="offcanvas"
-                    data-bs-target="#drawerExample">
+                    <div class="flow-icon" data-bs-toggle="offcanvas" data-bs-target="#drawerExample">
                       <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="26.4934" cy="27.2198" r="26.46" fill="#D7EAFF" />
                         <path
@@ -327,8 +329,7 @@
                 <div class="flow position-relative d-flex flex-column justify-content-between gap-3 align-items-end">
                   <img src="./images/arrow.png" alt="" class="flow-arrow">
                   <div class="flow-item no-arrow flow-item-end text-center">
-                    <div class="flow-icon" data-bs-toggle="offcanvas"
-                    data-bs-target="#drawerExample">
+                    <div class="flow-icon" data-bs-toggle="offcanvas" data-bs-target="#drawerExample">
                       <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="26.5" cy="31.8301" r="26.46" fill="#D7EAFF" />
                         <path
@@ -392,8 +393,7 @@
                     </div>
                   </div>
                   <div class="flow-item no-arrow flow-item-end text-center">
-                    <div class="flow-icon" data-bs-toggle="offcanvas"
-                    data-bs-target="#drawerExample">
+                    <div class="flow-icon" data-bs-toggle="offcanvas" data-bs-target="#drawerExample">
                       <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="26.4934" cy="27.2198" r="26.46" fill="#D7EAFF" />
                         <path
@@ -526,8 +526,7 @@
                 </div>
                 <div class="contextual-risk-data-body">
                   @for(item of riskList; track item.ip) {
-                  <div class="contextual-risk-detail" data-bs-toggle="offcanvas"
-                    data-bs-target="#drawerExample">
+                  <div class="contextual-risk-detail" data-bs-toggle="offcanvas" data-bs-target="#drawerExample">
                     <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="22.5" cy="23.3396" r="22.5" fill="#ECF5FF" />
                       <g clip-path="url(#clip0_1_747)">
@@ -552,7 +551,8 @@
                   }
                 </div>
                 <div class="contextual-risk-data-footer d-flex align-items-center justify-content-center gap-2 p-2">
-                  <span class="pagination-button" (click)="goToPrevious()">
+                  <span class="pagination-button" tabindex="0" role="button" aria-label="Previous Page"
+                    (click)="goToPrevious()" (keydown)="handlePaginationKeydown($event, 'prev')">
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <mask id="mask0_1_863" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
                         height="21">
@@ -567,7 +567,8 @@
                     </svg>
                   </span>
                   <span>{{ getPaginationText() }}</span>
-                  <span class="pagination-button" (click)="goToNext()">
+                  <span class="pagination-button" tabindex="0" role="button" aria-label="Next Page" (click)="goToNext()"
+                    (keydown)="handlePaginationKeydown($event, 'next')">
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <mask id="mask0_1_868" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21"
                         height="21">

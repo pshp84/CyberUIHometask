@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js/auto';
 import { RiskData } from './data/types';
 import { RISK_LIST } from './data/data';
@@ -7,8 +7,8 @@ import { RISK_LIST } from './data/data';
 const CONFIG = {
   CURRENT_PAGE: 1,
   ITEM_PER_PAGE: 2,
-  ONE: 1
-}
+  ONE: 1,
+};
 
 @Component({
   selector: 'app-dashboard',
@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   serverCard1: boolean = false;
   serverCard2: boolean = false;
   serverCard3: boolean = false;
-   fullRiskList: RiskData[] = RISK_LIST
+  fullRiskList: RiskData[] = RISK_LIST;
   riskList: RiskData[] = [];
 
   currentPage: number = CONFIG.CURRENT_PAGE;
@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     this.updateRiskList();
+    this.updateRiskList();
     const coursesData = {
       labels: ['Critical', 'High', 'Medium', 'Low'],
       datasets: [
@@ -103,7 +103,7 @@ export class DashboardComponent implements OnInit {
     this.serverCard3 = !this.serverCard3;
   }
 
-   updateRiskList(): void {
+  updateRiskList(): void {
     const start = (this.currentPage - CONFIG.ONE) * this.itemsPerPage;
     const end = start + this.itemsPerPage;
     this.riskList = this.fullRiskList.slice(start, end);
@@ -124,8 +124,28 @@ export class DashboardComponent implements OnInit {
   }
 
   getPaginationText(): string {
-    const start = (this.currentPage - CONFIG.ONE) * this.itemsPerPage + CONFIG.ONE;
-    const end = Math.min(start + this.itemsPerPage - CONFIG.ONE, this.totalItems);
+    const start =
+      (this.currentPage - CONFIG.ONE) * this.itemsPerPage + CONFIG.ONE;
+    const end = Math.min(
+      start + this.itemsPerPage - CONFIG.ONE,
+      this.totalItems
+    );
     return `Showing ${start}-${end} of ${this.totalItems}`;
+  }
+  handlePaginationKeydown(
+    event: KeyboardEvent,
+    direction: 'prev' | 'next'
+  ): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      // Support Enter and Space
+      direction === 'prev' ? this.goToPrevious() : this.goToNext();
+      event.preventDefault();
+    } else if (event.key === 'ArrowLeft' && direction === 'prev') {
+      this.goToPrevious();
+      event.preventDefault();
+    } else if (event.key === 'ArrowRight' && direction === 'next') {
+      this.goToNext();
+      event.preventDefault();
+    }
   }
 }

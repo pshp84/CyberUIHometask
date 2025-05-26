@@ -2,8 +2,6 @@ import { CommonModule } from '@angular/common';
 import {
   Component,
   EventEmitter,
-  HostListener,
-  Input,
   OnDestroy,
   OnInit,
   Output,
@@ -14,8 +12,8 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Subscription } from 'rxjs';
 
 const config = {
-  DESKTOP_VIEW_SIZE: 991
-}
+  DESKTOP_VIEW_SIZE: 991,
+};
 
 @Component({
   selector: 'app-sidebar',
@@ -57,7 +55,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     if (this.subscription) {
-    this.subscription.unsubscribe();
-  }
+      this.subscription.unsubscribe();
+    }
   }
 }
