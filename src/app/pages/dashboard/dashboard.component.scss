@@ -283,6 +283,11 @@
   border-radius: 8px;
   width: 360px;
   text-align: left;
+  &.top-right {
+     left: unset;
+    right: 64%;
+    top: -65px;
+  }
   &.right {
     left: unset;
     right: 20%;
